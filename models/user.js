@@ -6,6 +6,10 @@ var userSchema = new Schema({
     email: { type: String, required: true },
     numero:{type: Number, required: true },
     password: { type: String, required: true },
+    role: {
+        type: String,
+        default: "user" 
+      }
 })
 
 userSchema.pre('save', function (next) {
